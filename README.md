@@ -3,8 +3,8 @@
 ## Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <project-name>
+git clone https://github.com/piyush-cognizant/spinkart.git
+cd spinkart
 ```
 
 ## Install Dependencies
