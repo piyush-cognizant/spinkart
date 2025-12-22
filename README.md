@@ -11,6 +11,13 @@ cd supply-sync
 
 ```bash
 npm install
+npm install -g json-server
+```
+
+## Start the Mock API Server
+
+```bash
+json-server --watch db.json --port 3001
 ```
 
 ## Run the Project
