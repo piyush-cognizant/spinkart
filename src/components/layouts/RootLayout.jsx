@@ -1,10 +1,20 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { Sidebar } from "../common";
+import { useEffect } from "react";
+import useUserStore from "../../store/authStore";
 
 const RootLayout = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const navigate = useNavigate();
+  const {user, isAuthenticated} = useUserStore((state) => state);
+
+  useEffect(() => {
+    if (user === null && !isAuthenticated) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
 
   return (
     <Box sx={{ display: "flex", height: "100vh" }}>
