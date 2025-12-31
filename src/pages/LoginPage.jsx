@@ -50,7 +50,7 @@ const LoginPage = () => {
         }}
       >
         <Typography variant="h5" fontWeight="bold" mb={1}>
-          Welcome Back
+          SUPPLY SYNC
         </Typography>
         <Typography variant="body2" mb={3} color="text.secondary">
           Sign in to continue
