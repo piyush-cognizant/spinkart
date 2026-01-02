@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
     <ThemeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<RootLayout />}>
             <Route index element={<App />} />
             <Route path="vendors" element={<VendorsPage />} />
