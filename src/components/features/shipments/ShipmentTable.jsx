@@ -12,6 +12,13 @@ import {
 } from "@mui/material";
 import { BiEdit, BiTrash } from "react-icons/bi";
 
+// ShipmentTable component displays a list of shipments in a table format 
+// Props:
+// - shipments: array of shipment objects 
+// - loading: boolean to show loading state 
+// - onEdit: function to handle editing a shipment 
+// - onDelete: function to handle deleting a shipment
+
 const ShipmentTable = ({ shipments, loading, onEdit, onDelete }) => {
   const getStatusColor = (status) => {
     const statusLower = status.toLowerCase();
@@ -23,6 +30,7 @@ const ShipmentTable = ({ shipments, loading, onEdit, onDelete }) => {
   };
 
   return (
+    // TableContainer wraps the table with Paper styling
     <TableContainer component={Paper} sx={{ mt: 3 }}>
       <Table>
         <TableHead>
